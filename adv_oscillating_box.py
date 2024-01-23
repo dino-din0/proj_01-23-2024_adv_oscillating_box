@@ -205,7 +205,9 @@ class My_Differential_System( Define_Differential_System ):
         
         k = 3.0
         
-        c = 2.0 * ( 2.0 * math.sqrt(  k * m  )  )
+        xi = 1.6
+        
+        # c = 2.0 * ( 2.0 * math.sqrt(  k * m  )  )
         
         fs_mag =  0.0
         
@@ -216,12 +218,12 @@ class My_Differential_System( Define_Differential_System ):
         #-------------------------------------------   
 
         if ( self.choice == "yes" ):
-            c = self.eig_par
+            xi = self.eig_par
 
         self.par = numpy.zeros( ( self.numb_of_eq, self.numb_of_par ), dtype = float ) 
 
-        self.par[ 1 ][ 0 ] = k / m 
-        self.par[ 1 ][ 1 ] = c / m 
+        self.par[ 1 ][ 0 ] = k
+        self.par[ 1 ][ 1 ] = 2.0 * xi * math.sqrt( k ) 
         
         self.par[ 1 ][ 2 ] = fs_mag / m
         self.par[ 1 ][ 3 ] = omega
