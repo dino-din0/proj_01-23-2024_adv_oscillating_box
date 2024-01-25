@@ -201,11 +201,11 @@ class My_Differential_System( Define_Differential_System ):
         #-------------------------------------------
         # System parameters
         
-        m = 2.0
+        m = 4.0
         
         k = 3.0
         
-        xi = 1.6
+        xi = 0.2 # The critical value -- 1.0 means there won't be any critical values 
         
         # c = 2.0 * ( 2.0 * math.sqrt(  k * m  )  )
         
