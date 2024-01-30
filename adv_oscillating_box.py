@@ -205,7 +205,8 @@ class My_Differential_System( Define_Differential_System ):
         
         k = 3.0
         
-        xi = 0.2 # The critical value -- 1.0 means there won't be any critical values 
+        xi = -0.2 # The critical value -- 1.0 means there won't be any critical values 
+        # Lecture Jan 30. 2024 - changed xi to =-0.2
         
         # c = 2.0 * ( 2.0 * math.sqrt(  k * m  )  )
         
